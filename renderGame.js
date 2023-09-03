@@ -13,5 +13,5 @@ export function renderLevelGame(){
         <p class="start-over">Начать заново</p>
    </div>`
 
-   countElement.innerHTML = levelHtml
+   countElement.innerHTML = levelHtml;
 }
