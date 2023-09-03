@@ -2,7 +2,7 @@ import { renderLevelGame } from "./renderGame.js";
 
 
 const countElement = document.querySelector('.appGame');
-let newGame = '';
+let newGame = "";
 
 const renderComplexity = () => {
     
