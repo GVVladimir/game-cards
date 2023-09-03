@@ -1,0 +1,165 @@
+@font-face {
+    font-family: 'StratosSkyeng';
+    src: url(fonts/stratosskyengweb-regular.woff2) format('woff2'),
+    url(fonts/stratosskyengweb-regular.woff) format('woff');
+    font-weight: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+  font-family: 'StratosSkyeng', sans-serif;
+
+  background-color: rgb(59, 120, 218);
+  
+}
+
+.count-body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.count {
+    margin: 0 auto;
+    
+    width: 480px;
+    height: 459px;
+    border-radius: 12px;
+    background-color: #C2F5FF;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 32px;
+  
+}
+
+.count-text {
+    width: 208px;
+    height: 96px;
+    overflow: hidden;
+    font-size: 40px;
+    line-height: 48px;
+    color: #004980;
+    font-family: 'Montserrat';
+    text-align: center;
+ 
+}
+
+.count-button {
+    width: 246px;
+    height: 50px;
+    border-radius: 12px;
+    background-color: #7AC100;
+    color: #FFFFFF;
+   
+    font-size: 24px;
+    
+    text-align: center;
+    transform: 0.2s;
+}
+
+.count-button:hover {
+    box-shadow: 0px 3px 3px black;
+    transition: 0.2s;
+}
+.count-button:active{
+    box-shadow: 0px 1px 3px black;
+}
+
+.prod_checbox strong {
+    font-size: 14px;
+      color: #333;
+      display: inline-block;
+      margin-right: 10px;
+      letter-spacing: 0.5px;}
+  
+  .radio-toolbar input[type="radio"] {
+      display: none;
+      
+  }
+  
+  .radio-toolbar label {
+      display: inline-block;
+      padding: 2px 9px;
+      cursor: pointer;
+      border: 1px solid #00C2FF;
+      border-radius: 12px;
+      font-size: 64px;
+      width: 96px;
+      height: 98px;
+      text-align: center;
+      gap: 32px;
+  }
+  
+  .radio-toolbar input[type="radio"]:checked + label {
+      background-color: #00C2FF;
+      border: 1px solid #00C2FF;
+      color: #fff;
+  }
+  
+  .radio-toolbar label:hover {
+      background-color: #B9EA2C;
+      border: 1px solid #B9EA2C;
+  }
+
+  .level {
+    display: flex;
+    height: 91px;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 22px;
+    margin-right: 22px;
+    margin-top: 22px;
+    
+    
+  }
+
+  .time {
+    width: 155px;
+    height: 91px;
+
+  }
+
+  .report {
+    width: 155px;
+    display: flex;
+    justify-content: end;
+    gap: 65px;
+  }
+
+  .counter {
+    color: #FFFFFF;
+    font-size: 64px;
+
+  }
+
+  .watch {
+    color: #FFFFFF;
+    font-size: 16px;
+    
+  }
+
+  .start-over {
+    width: 246px;
+    height: 50px;
+    border-radius: 12px;
+    background-color: #7AC100;
+    color: #FFFFFF;
+    font-size: 24px;
+    text-align: center;
+   
+    
+  }
+
+  .start-over:hover {
+    background-color: #9aef09;
+  }
