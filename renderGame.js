@@ -8,7 +8,7 @@ export function renderLevelGame(){
                 <p class="min watch">min</p>
                 <p class="sec watch">sec</p>
          </div>
-                <p class="counter">00.00</p>
+                <p class="counter">00:00</p>
         </div>
         <p class="start-over">Начать заново</p>
    </div>`
