@@ -28,12 +28,10 @@ body {
 
 .count {
     margin: 0 auto;
-    
     width: 480px;
     height: 459px;
     border-radius: 12px;
     background-color: #C2F5FF;
-   
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,8 +47,7 @@ body {
     font-size: 40px;
     line-height: 48px;
     color: #004980;
-    font-family: 'Montserrat';
-    text-align: center;
+     text-align: center;
  
 }
 
@@ -60,20 +57,12 @@ body {
     border-radius: 12px;
     background-color: #7AC100;
     color: #FFFFFF;
-   
     font-size: 24px;
-    
     text-align: center;
-    transform: 0.2s;
+   
 }
 
-.count-button:hover {
-    box-shadow: 0px 3px 3px black;
-    transition: 0.2s;
-}
-.count-button:active{
-    box-shadow: 0px 1px 3px black;
-}
+
 
 .prod_checbox strong {
     font-size: 14px;
@@ -91,13 +80,13 @@ body {
       display: inline-block;
       padding: 2px 9px;
       cursor: pointer;
-      border: 1px solid #00C2FF;
+      background-color: #FFFFFF;
       border-radius: 12px;
       font-size: 64px;
       width: 96px;
       height: 98px;
       text-align: center;
-      gap: 32px;
+      margin-right: 20px;
   }
   
   .radio-toolbar input[type="radio"]:checked + label {
@@ -150,16 +139,16 @@ body {
 
   .start-over {
     width: 246px;
-    height: 50px;
+    height: 40px;
     border-radius: 12px;
     background-color: #7AC100;
     color: #FFFFFF;
     font-size: 24px;
     text-align: center;
+    padding-top: 10px;
+
    
     
   }
 
-  .start-over:hover {
-    background-color: #9aef09;
-  }
+  

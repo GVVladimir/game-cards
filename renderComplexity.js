@@ -16,7 +16,7 @@ const renderComplexity = () => {
     <div class="prod_checbox">  
     <div class="radio-toolbar"> 
         <input type="radio" id="radio1" name="radios" value="radio1" checked>
-        <label for="radio1"></label>1</label>
+        <label for="radio1">1</label>
         
         <input type="radio" id="radio2" name="radios" value="radio2">
         <label for="radio2">2</label>
