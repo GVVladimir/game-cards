@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "http-server -p 3004",
-    "format": "prettier --write ./src/"
+    "format": "prettier --write ./src/",
+    "lint:js": "eslint ./src/**/*.js"
   },
   "author": "",
   "license": "ISC",
