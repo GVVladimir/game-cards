@@ -1,6 +1,6 @@
-const countElement = document.querySelector('.appGame');
+const countElement = document.querySelector('.appGame')
 
-export function renderLevelGame(){
+export function renderLevelGame() {
     const levelHtml = `
     <div class="level">
         <div class="time">
@@ -13,5 +13,5 @@ export function renderLevelGame(){
         <p class="start-over">Начать заново</p>
    </div>`
 
-   countElement.innerHTML = levelHtml;
+    countElement.innerHTML = levelHtml
 }

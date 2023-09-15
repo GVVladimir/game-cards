@@ -1,0 +1,24 @@
+{
+  "name": "game-cards",
+  "version": "1.0.0",
+  "description": "",
+  "main": "renderComplexity.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server -p 3004",
+    "format": "prettier --write ./src/"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^14.1.1",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "axios": "^1.5.0",
+    "eslint": "^8.49.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "prettier": "^3.0.3"
+  }
+}

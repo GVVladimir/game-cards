@@ -1,11 +1,9 @@
-import { renderLevelGame } from "./renderGame.js";
+import { renderLevelGame } from './renderGame.js'
 
-
-const countElement = document.querySelector('.appGame');
-let newGame = '';
+const countElement = document.querySelector('.appGame')
+let newGame = ''
 
 const renderComplexity = () => {
-    
     let complexityHTML = ` <div class="count-body">
     <div class="count" id="count">
    
@@ -27,27 +25,20 @@ const renderComplexity = () => {
 </div>
     <button class="count-button">Старт</button>
     </div>
-    </div>`;
-    
-    countElement.innerHTML = complexityHTML;
+    </div>`
+
+    countElement.innerHTML = complexityHTML
 
     const complexityElements = document.getElementsByName('radios')
-    const startButton = document.querySelector('.count-button');
+    const startButton = document.querySelector('.count-button')
     startButton.addEventListener('click', () => {
-        for( const complexityElement of complexityElements){
-             if(complexityElement.checked){
-             newGame = complexityElement.value;
-             renderLevelGame()
-             
+        for (const complexityElement of complexityElements) {
+            if (complexityElement.checked) {
+                newGame = complexityElement.value
+                renderLevelGame()
             }
         }
-    
-        })
-        
-    }
-
-
-    
+    })
+}
 
 renderComplexity()
-
