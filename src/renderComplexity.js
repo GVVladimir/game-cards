@@ -1,4 +1,4 @@
-import { renderLevelGame } from './renderGame.js'
+import { getRenderCards, renderLevelGame } from './renderGame.js'
 
 const countElement = document.querySelector('.appGame')
 let newGame = ''
@@ -25,6 +25,7 @@ const renderComplexity = () => {
 </div>
     <button class="count-button">Старт</button>
     </div>
+    
     </div>`
 
     countElement.innerHTML = complexityHTML
@@ -36,6 +37,8 @@ const renderComplexity = () => {
             if (complexityElement.checked) {
                 newGame = complexityElement.value
                 renderLevelGame()
+                getRenderCards()
+
             }
         }
     })
