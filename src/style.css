@@ -95,16 +95,15 @@ body {
 .level {
     display: flex;
     height: 91px;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    margin-left: 22px;
-    margin-right: 22px;
-    margin-top: 22px;
+    margin: 22px;
 }
 
 .time {
     width: 155px;
     height: 91px;
+    margin-right: 250px;
 }
 
 .report {
@@ -133,4 +132,18 @@ body {
     font-size: 24px;
     text-align: center;
     padding-top: 10px;
+}
+
+.cards {
+    width: 95px;
+    height: 133px;
+    margin: 7.5px;
+}
+
+.app-cards {
+    display: flex;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    flex-wrap: wrap;
 }
