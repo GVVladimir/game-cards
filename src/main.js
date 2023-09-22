@@ -1,7 +1,7 @@
 import { getRenderCards, renderLevelGame } from './renderGame.js'
 
 const countElement = document.querySelector('.appGame')
-let newGame = ''
+// let newGame = ''
 
 const renderComplexity = () => {
     let complexityHTML = ` <div class="count-body">
@@ -11,7 +11,7 @@ const renderComplexity = () => {
        Выберите сложность
     </header>
     
-    <div class="prod_checbox">  
+    <div class="prod-checbox">  
     <div class="radio-toolbar"> 
         <input type="radio" id="radio1" name="radios" value="radio1" checked>
         <label for="radio1">1</label>
@@ -35,10 +35,9 @@ const renderComplexity = () => {
     startButton.addEventListener('click', () => {
         for (const complexityElement of complexityElements) {
             if (complexityElement.checked) {
-                newGame = complexityElement.value
+                // newGame = complexityElement.value
                 renderLevelGame()
                 getRenderCards()
-
             }
         }
     })

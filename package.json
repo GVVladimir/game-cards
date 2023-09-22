@@ -1,30 +1,38 @@
 {
-  "name": "game-cards",
-  "version": "1.0.0",
-  "description": "",
-  "main": "renderComplexity.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "http-server -p 3004",
-    "format": "prettier --write ./src/",
-    "lint:js": "eslint ./src/**/*.js",
-    "lint:css": "stylelint ./src/**/*.css"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "http-server": "^14.1.1",
-    "lodash": "^4.17.21"
-  },
-  "devDependencies": {
-    "axios": "^1.5.0",
-    "copy-webpack-plugin": "^11.0.0",
-    "css-loader": "^6.8.1",
-    "eslint": "^8.49.0",
-    "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-prettier": "^5.0.0",
-    "html-webpack-plugin": "^5.5.3",
-    "prettier": "^3.0.3",
-    "webpack-cli": "^5.1.4"
-  }
+    "name": "game-cards",
+    "version": "1.0.0",
+    "description": "",
+    "main": "renderComplexity.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "http-server -p 3004",
+        "format": "prettier --write ./src/",
+        "lint:js": "eslint ./src/**/*.js",
+        "lint:js:fix": "eslint --fix ./src/**/*.js",
+        "lint:css": "stylelint ./src/**/*.css",
+        "lint": "npm run lint:js && npm run lint:css",
+        "prepare": "husky install"
+        
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "http-server": "^14.1.1",
+        "lodash": "^4.17.21"
+    },
+    "devDependencies": {
+        "axios": "^1.5.0",
+        "copy-webpack-plugin": "^11.0.0",
+        "css-loader": "^6.8.1",
+        "eslint": "^8.49.0",
+        "eslint-config-prettier": "^9.0.0",
+        "eslint-plugin-prettier": "^5.0.0",
+        "html-webpack-plugin": "^5.5.3",
+        "husky": "^8.0.3",
+        "prettier": "^3.0.3",
+        "stylelint": "^15.10.3",
+        "stylelint-config-standard": "^34.0.0",
+        "webpack": "^5.88.2",
+        "webpack-cli": "^5.1.4"
+    }
 }

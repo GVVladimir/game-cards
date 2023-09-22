@@ -1,17 +1,16 @@
 import { cards } from './arrCard.js'
 
-
 const blockCards = document.querySelector('.app-cards')
 
 export function getRenderCards() {
-    const cardsHtml = cards.map((card) => {
+    const cardsHtml = cards
+        .map((card) => {
             return `<img class="cards" src="${card}" alt="card"></img>`
         })
         .join('')
-    
-    
+
     // blockCards.insertAdjacentHTML('afterbegin', cardsHtml)
-    blockCards.innerHTML = cardsHtml;
+    blockCards.innerHTML = cardsHtml
 }
 const countElement = document.querySelector('.appGame')
 export function renderLevelGame() {

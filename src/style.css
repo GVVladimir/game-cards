@@ -1,8 +1,8 @@
 @font-face {
     font-family: StratosSkyeng;
     src:
-        url(fonts/stratosskyengweb-regular.woff2) format('woff2'),
-        url(fonts/stratosskyengweb-regular.woff) format('woff');
+        url('fonts/stratosskyengweb-regular.woff2') format('woff2'),
+        url('fonts/stratosskyengweb-regular.woff') format('woff');
     font-weight: normal;
 }
 
@@ -57,7 +57,7 @@ body {
     border: none;
 }
 
-.prod_checbox strong {
+.prod-checbox strong {
     font-size: 14px;
     color: #333;
     display: inline-block;
@@ -81,15 +81,15 @@ body {
     margin: 10px;
 }
 
+.radio-toolbar label:hover {
+    background-color: #b9ea2c;
+    border: 1px solid #b9ea2c;
+}
+
 .radio-toolbar input[type='radio']:checked + label {
     background-color: #00c2ff;
     border: 1px solid #00c2ff;
     color: #fff;
-}
-
-.radio-toolbar label:hover {
-    background-color: #b9ea2c;
-    border: 1px solid #b9ea2c;
 }
 
 .level {
