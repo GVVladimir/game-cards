@@ -1,18 +1,51 @@
 import { cards } from './arrCard.js'
+import { newGame } from './main.js'
 
-const blockCards = document.querySelector('.app-cards')
+const countGameElement = document.querySelector('.app-game')
 
+// const countBtnElement = document.querySelector('.appGame')
+// const allCards = document.getElementsByClassName('.cards')
+
+export let newCards = []
 export function getRenderCards() {
-    const cardsHtml = cards
+    let countCards = 0
+    let randomCards = cards.sort(() => Math.random() - 0.5)
+    if (newGame === 'radio1') {
+        countCards = 3
+    }
+    if (newGame === 'radio2') {
+        countCards = 6
+    }
+    if (newGame === 'radio3') {
+        countCards = 9
+    }
+
+    for (let i = 0; i < countCards; i++) {
+        newCards.push(randomCards[i])
+    }
+
+    newCards = newCards.concat(newCards)
+    newCards.sort(() => Math.random - 0.5)
+
+    const cardsHtml = newCards
         .map((card) => {
-            return `<img class="cards" src="${card}" alt="card"></img>`
+            return `<div class="cardsBox">
+            <img class="cards" src="${card.img}" alt="card"></img>
+            <img class="shirt-cards" src="dist/static/shirt.png" alt="card"></img>
+            </div>
+            `
         })
         .join('')
 
-    // blockCards.insertAdjacentHTML('afterbegin', cardsHtml)
-    blockCards.innerHTML = cardsHtml
+    const blockCards = document.querySelector('.app-cards')
+    blockCards.insertAdjacentHTML('afterBegin', cardsHtml)
+    // blockCards.innerHTML = cardsHtml
+    const shirtCadrs = document.querySelectorAll('.shirt-cards')
+    for (const shirtCadr of shirtCadrs) {
+        shirtCadr.classList.add('new-cards')
+    }
 }
-const countElement = document.querySelector('.appGame')
+
 export function renderLevelGame() {
     const levelHtml = `
     <div class="level">
@@ -25,7 +58,9 @@ export function renderLevelGame() {
         </div>
         <p class="start-over">Начать заново</p>
         
-    </div>`
+    </div>
+    <div class="app-cards"></div>
+    `
 
-    countElement.innerHTML = levelHtml
+    countGameElement.innerHTML = levelHtml
 }
