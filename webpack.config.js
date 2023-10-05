@@ -26,6 +26,7 @@ module.exports = {
         new CopyPlugin({
             patterns: [{ from: 'img', to: 'static' }],
         }),
+
         new HtmlWebpackPlugin({
             template: 'index.html',
         }),

@@ -12,7 +12,6 @@
         "lint:css": "stylelint ./src/**/*.css",
         "lint": "npm run lint:js && npm run lint:css",
         "prepare": "husky install"
-        
     },
     "author": "",
     "license": "ISC",
