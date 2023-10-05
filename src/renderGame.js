@@ -29,7 +29,7 @@ export function getRenderCards() {
 
     const cardsHtml = newCards
         .map((card) => {
-            return `<div class="cardsBox">
+            return `<div class="cards-box">
             <img class="cards" src="${card.img}" alt="card"></img>
             <img class="shirt-cards" src="dist/static/shirt.png" alt="card"></img>
             </div>
