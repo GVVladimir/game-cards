@@ -1,4 +1,5 @@
 import { getRenderCards, renderLevelGame } from './renderGame.js'
+import '../src/style.css'
 const countGameElement = document.querySelector('.app-game')
 // const blockCards = document.querySelector('.app-cards')
 const countBtnElement = document.querySelector('.appGame')

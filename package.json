@@ -5,7 +5,8 @@
     "main": "renderComplexity.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "http-server -p 3004",
+        "start": "webpack-dev-server --open",
+        "build": "cross-env NODE_eNV=production webpack",
         "format": "prettier --write ./src/",
         "lint:js": "eslint ./src/**/*.js",
         "lint:js:fix": "eslint --fix ./src/**/*.js",
@@ -16,6 +17,7 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "cross-env": "^7.0.3",
         "http-server": "^14.1.1",
         "lodash": "^4.17.21"
     },
@@ -23,15 +25,18 @@
         "axios": "^1.5.0",
         "copy-webpack-plugin": "^11.0.0",
         "css-loader": "^6.8.1",
+        "css-minimizer-webpack-plugin": "^5.0.1",
         "eslint": "^8.49.0",
         "eslint-config-prettier": "^9.0.0",
         "eslint-plugin-prettier": "^5.0.0",
         "html-webpack-plugin": "^5.5.3",
         "husky": "^8.0.3",
+        "mini-css-extract-plugin": "^2.7.6",
         "prettier": "^3.0.3",
         "stylelint": "^15.10.3",
         "stylelint-config-standard": "^34.0.0",
         "webpack": "^5.88.2",
-        "webpack-cli": "^5.1.4"
+        "webpack-cli": "^5.1.4",
+        "webpack-dev-server": "^4.15.1"
     }
 }

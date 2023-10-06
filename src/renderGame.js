@@ -31,7 +31,7 @@ export function getRenderCards() {
         .map((card) => {
             return `<div class="cards-box">
             <img class="cards" src="${card.img}" alt="card"></img>
-            <img class="shirt-cards" src="dist/static/shirt.png" alt="card"></img>
+            <img class="shirt-cards" src="./static/shirt.png" alt="card"></img>
             </div>
             `
         })
