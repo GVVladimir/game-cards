@@ -174,3 +174,60 @@ body {
     height: 100px;
     background-color: red;
 } */
+
+.app-result-win {
+    margin: auto;
+    margin-top: 158px;
+    width: 480px;
+    height: 459px;
+    border-radius: 12px;
+    background-color: #c2f5ff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.result-header {
+    width: 310px;
+    height: 48px;
+    font-size: 40px;
+    line-height: 48px;
+    color: #004980;
+
+    /* font: StratosSkyeng; */
+    margin-bottom: 28px;
+    margin-left: 32px;
+}
+
+.rusult-img {
+    margin-top: 31px;
+    height: 96px;
+    width: 96px;
+    margin-bottom: 10px;
+    margin-left: 24px;
+}
+
+.time-spent {
+    width: 230px;
+    height: 32px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    color: #000;
+}
+
+.time-watch {
+    width: 155px;
+    height: 72px;
+    font-size: 64px;
+    margin-bottom: 40px;
+}
+
+.btn-new-game {
+    width: 246px;
+    height: 50px;
+    border-radius: 12px;
+    background-color: #7ac100;
+    color: #fff;
+    font-size: 24px;
+}

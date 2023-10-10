@@ -1,4 +1,9 @@
-import { getRenderCards, renderLevelGame } from './renderGame.js'
+import {
+    getRenderCards,
+    gameCardsWin,
+    gameCardsLost,
+    renderLevelGame,
+} from './renderGame.js'
 import '../src/style.css'
 const countGameElement = document.querySelector('.app-game')
 // const blockCards = document.querySelector('.app-cards')
@@ -6,7 +11,7 @@ const countBtnElement = document.querySelector('.appGame')
 
 export let newGame = ''
 
-const renderComplexity = () => {
+export const renderComplexity = () => {
     let complexityHTML = ` <div class="count-body">
     <div class="count" id="count">
    
@@ -86,9 +91,9 @@ function clickCards() {
                 console.log(card2)
 
                 if (card1 === card2) {
-                    alert('Вы выиграли')
+                    gameCardsWin()
                 } else {
-                    alert('Вы проиграли!')
+                    gameCardsLost()
                 }
             }
         })
