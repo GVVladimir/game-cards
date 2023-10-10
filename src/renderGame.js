@@ -39,8 +39,7 @@ export function getRenderCards() {
             return `<div class="cards-box">
             <img class="cards" src="${card.img}" alt="card"></img>
             <img class="shirt-cards" src="./static/shirt.png" alt="card"></img>
-            </div>
-            `
+            </div>`
         })
         .join('')
 
@@ -86,6 +85,7 @@ export function renderLevelGame() {
 
     newGameBtn()
 }
+clearInterval(counterWath)
 
 export function gameCardsWin() {
     const winHTML = `

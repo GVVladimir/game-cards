@@ -3,6 +3,7 @@ import {
     gameCardsWin,
     gameCardsLost,
     renderLevelGame,
+    counterWath,
 } from './renderGame.js'
 import '../src/style.css'
 const countGameElement = document.querySelector('.app-game')
@@ -48,7 +49,7 @@ export const renderComplexity = () => {
                 getRenderCards({ countBtnElement })
                 setTimeout(() => {
                     getHeadenCard()
-                }, 5000)
+                }, 3000)
             }
         }
     })
@@ -91,9 +92,15 @@ function clickCards() {
                 console.log(card2)
 
                 if (card1 === card2) {
-                    gameCardsWin()
+                    setTimeout(() => {
+                        clearInterval(counterWath)
+                        gameCardsWin()
+                    }, 1000)
                 } else {
-                    gameCardsLost()
+                    setTimeout(() => {
+                        clearInterval(counterWath)
+                        gameCardsLost()
+                    }, 1000)
                 }
             }
         })
