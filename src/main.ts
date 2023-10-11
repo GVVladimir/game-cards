@@ -4,11 +4,11 @@ import {
     gameCardsLost,
     renderLevelGame,
     counterWath,
-} from './renderGame.js'
+} from './renderGame'
 import '../src/style.css'
-const countGameElement = document.querySelector('.app-game')
+const countGameElement = document.querySelector('.app-game') as HTMLElement
 // const blockCards = document.querySelector('.app-cards')
-const countBtnElement = document.querySelector('.appGame')
+const countBtnElement = document.querySelector('.appGame') as HTMLElement
 
 export let newGame = ''
 
@@ -37,16 +37,16 @@ export const renderComplexity = () => {
     
     </div>`
 
-    countGameElement.innerHTML = complexityHTML
+    countGameElement.innerHTML = complexityHTML 
 
-    const complexityElements = document.getElementsByName('radios')
-    const startButton = document.querySelector('.count-button')
+    const complexityElements = document.getElementsByName('radios') as NodeListOf<HTMLInputElement> 
+    const startButton = document.querySelector('.count-button') as HTMLElement
     startButton.addEventListener('click', () => {
         for (const complexityElement of complexityElements) {
             if (complexityElement.checked) {
                 newGame = complexityElement.value
-                renderLevelGame({ countGameElement })
-                getRenderCards({ countBtnElement })
+                renderLevelGame()
+                getRenderCards()
                 setTimeout(() => {
                     getHeadenCard()
                 }, 3000)
@@ -73,10 +73,10 @@ function getHeadenCard() {
 function clickCards() {
     const gameClickCards = document.querySelectorAll('.cards-box')
     let countClick = 0
-    let card1
+    let card1: string
     let card2
 
-    for (const gameClickCard of gameClickCards) {
+    for (const gameClickCard of gameClickCards as any) {
         gameClickCard.addEventListener('click', () => {
             let cardsChildren = gameClickCard.children
             cardsChildren[0].classList.remove('new-cards')

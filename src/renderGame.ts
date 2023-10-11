@@ -1,16 +1,15 @@
-import { cards } from './arrCard.js'
-import { newGame, renderComplexity } from './main.js'
+import { cards } from './arrCard'
+import { newGame, renderComplexity } from './main'
 
-export let allTimeGame
-export let counterWath
-export let time
-
-const countGameElement = document.querySelector('.app-game')
+export let allTimeGame: string
+export let counterWath: NodeJS.Timeout
+export let time: number
+const countGameElement = document.querySelector('.app-game') as HTMLElement
 
 // const countBtnElement = document.querySelector('.appGame')
 // const allCards = document.getElementsByClassName('.cards')
 
-export let newCards = []
+export let newCards: { img: string }[] = []
 export function getRenderCards() {
     let countCards = 0
     let randomCards = cards.sort(() => Math.random() - 0.5)
@@ -32,7 +31,7 @@ export function getRenderCards() {
     }
 
     newCards = newCards.concat(newCards)
-    newCards.sort(() => Math.random - 0.5)
+    newCards.sort(() => Math.random() - 0.5)
 
     const cardsHtml = newCards
         .map((card) => {
@@ -43,8 +42,8 @@ export function getRenderCards() {
         })
         .join('')
 
-    const blockCards = document.querySelector('.app-cards')
-    blockCards.insertAdjacentHTML('afterBegin', cardsHtml)
+    const blockCards = document.querySelector('.app-cards') as HTMLElement
+    blockCards.insertAdjacentHTML('afterbegin', cardsHtml)
     // blockCards.innerHTML = cardsHtml
     const shirtCadrs = document.querySelectorAll('.shirt-cards')
     for (const shirtCadr of shirtCadrs) {
@@ -70,13 +69,13 @@ export function renderLevelGame() {
 
     countGameElement.innerHTML = levelHtml
 
-    const counterGame = document.getElementById('counterWath')
+    const counterGame = document.getElementById('counterWath') as HTMLElement
     time = 0
 
     counterWath = setInterval(() => {
-        let minuts = Math.floor((time / 60) % 60)
+        let minuts: string | number = Math.floor((time / 60) % 60)
         minuts = minuts < 10 ? '0' + minuts : minuts
-        let second = Math.floor(time % 60)
+        let second: string | number = Math.floor(time % 60)
         second = second < 10 ? '0' + second : second
         counterGame.textContent = `${minuts}.${second}`
         allTimeGame = `${minuts}.${second}`
@@ -85,7 +84,7 @@ export function renderLevelGame() {
 
     newGameBtn()
 }
-clearInterval(counterWath)
+
 
 export function gameCardsWin() {
     const winHTML = `
