@@ -7,7 +7,7 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const isProdaction = process.env.NODE_ENV === 'prodaction'
 
 module.exports = {
-    entry: './src/main.js',
+    entry: './src/main.ts',
     mode: isProdaction ? 'production' : 'development',
     module: {
         rules: [
@@ -32,12 +32,12 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js',
+        filename: 'bundle.ts',
         clean: true,
     },
-    // resolve: {
-    //     extensions: ['.ts', '.js'],
-    // },
+    resolve: {
+        extensions: ['.ts', '.js'],
+    },
     plugins: [
         new CopyPlugin({
             patterns: [{ from: 'img', to: 'static' }],
@@ -50,36 +50,3 @@ module.exports = {
     },
     devtool: isProdaction ? 'hidden-source-map' : 'source-map',
 }
-
-// module.exports = {
-//     entry: './src/main.js',
-
-//     mode: isProdaction ? 'production' : 'development',
-//     output: {
-//         path: path.resolve(__dirname, 'dist'),
-//         filename: 'bundle.js',
-//         clean: true,
-//     },
-//     module: {
-//         rules: [
-//             { test: /\.css$/, use: ['style-loader', 'css-loader'] },
-//             {
-//                 test: /\.(png|svg|jpd|jpeg|gif)$/i,
-//                 type: 'asset/resource',
-//             },
-//             {
-//                 test: /\.(woff|woff2|eot|ttf|otf)$/i,
-//                 type: 'asset/resource',
-//             },
-//         ],
-//     },
-//     plugins: [
-//         new CopyPlugin({
-//             patterns: [{ from: 'img', to: 'static' }],
-//         }),
-
-//         new HtmlWebpackPlugin({
-//             template: 'index.html',
-//         }),
-//     ],
-// }
