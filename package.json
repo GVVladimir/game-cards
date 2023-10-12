@@ -11,14 +11,18 @@
         "lint:js": "eslint ./src/**/*.js",
         "lint:js:fix": "eslint --fix ./src/**/*.js",
         "lint:css": "stylelint ./src/**/*.css",
-        "lint": "npm run lint:js && npm run lint:css",
+        "lint": "npm run lint:js && npm run lint:css && lint . --ext .ts",
         "prepare": "husky install",
         "lint:ts": "tsc --noEmit"
+        
     },
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "@typescript-eslint/eslint-plugin": "^6.7.5",
+        "@typescript-eslint/parser": "^6.7.5",
         "cross-env": "^7.0.3",
+        "eslint-plugin-react": "^7.33.2",
         "http-server": "^14.1.1",
         "lodash": "^4.17.21"
     },
@@ -28,7 +32,7 @@
         "copy-webpack-plugin": "^11.0.0",
         "css-loader": "^6.8.1",
         "css-minimizer-webpack-plugin": "^5.0.1",
-        "eslint": "^8.49.0",
+        "eslint": "^8.51.0",
         "eslint-config-prettier": "^9.0.0",
         "eslint-plugin-prettier": "^5.0.0",
         "html-webpack-plugin": "^5.5.3",

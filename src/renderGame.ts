@@ -117,7 +117,7 @@ export function gameCardsLost() {
 }
 
 function newGameBtn() {
-    const btnNewGameElements = document.querySelectorAll('.btn-new-game')
+    const btnNewGameElements = document.querySelectorAll('.btn-new-game') 
     for (const btnNewGameElement of btnNewGameElements)
         btnNewGameElement.addEventListener('click', () => {
             renderComplexity()

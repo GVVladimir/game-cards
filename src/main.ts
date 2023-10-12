@@ -59,7 +59,7 @@ renderComplexity()
 
 function getHeadenCard() {
     const allCards = document.querySelectorAll('.cards')
-    const shirtCadrs = document.querySelectorAll('.shirt-cards')
+    const shirtCadrs = document.querySelectorAll('.shirt-cards') as NodeListOf<Element>
 
     for (const allCard of allCards) {
         allCard.classList.add('new-cards')
