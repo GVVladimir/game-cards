@@ -76,7 +76,7 @@ function clickCards() {
     let card1: string
     let card2
 
-    for (const gameClickCard of gameClickCards as any) {
+    for (const gameClickCard of gameClickCards) {
         gameClickCard.addEventListener('click', () => {
             let cardsChildren = gameClickCard.children
             cardsChildren[0].classList.remove('new-cards')
@@ -84,11 +84,11 @@ function clickCards() {
 
             countClick++
             if (countClick % 2 !== 0) {
-                card1 = gameClickCard.children[0].src
+                card1 = (gameClickCard.children[0] as HTMLImageElement).src
                 console.log(card1)
             }
             if (countClick % 2 === 0) {
-                card2 = gameClickCard.children[0].src
+                card2 = (gameClickCard.children[0] as HTMLImageElement).src
                 console.log(card2)
 
                 if (card1 === card2) {
