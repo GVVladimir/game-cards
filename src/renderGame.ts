@@ -12,7 +12,7 @@ const countGameElement = document.querySelector('.app-game') as HTMLElement
 export let newCards: { img: string }[] = []
 export function getRenderCards() {
     let countCards = 0
-    let randomCards = cards.sort(() => Math.random() - 0.5)
+    const randomCards = cards.sort(() => Math.random() - 0.5)
     if (newGame === 'radio1') {
         countCards = 3
         newCards.splice(0)
@@ -85,7 +85,6 @@ export function renderLevelGame() {
     newGameBtn()
 }
 
-
 export function gameCardsWin() {
     const winHTML = `
     <div class="app-result-win">
@@ -117,7 +116,7 @@ export function gameCardsLost() {
 }
 
 function newGameBtn() {
-    const btnNewGameElements = document.querySelectorAll('.btn-new-game') 
+    const btnNewGameElements = document.querySelectorAll('.btn-new-game')
     for (const btnNewGameElement of btnNewGameElements)
         btnNewGameElement.addEventListener('click', () => {
             renderComplexity()

@@ -1,4 +1,4 @@
-export let cards = [
+export const cards = [
     { img: './static/ace booby.png' },
     { img: './static/booby 9.png' },
     { img: './static/booby 8.png' },

@@ -8,18 +8,16 @@
         "start": "webpack-dev-server --open",
         "build": "cross-env NODE_eNV=production webpack",
         "format": "prettier --write ./src/",
-        "lint:ts": "eslint ./src/**/*.ts tsc --noEmit",
+        "lint:js": "eslint ./src/**/*.ts ",
         "lint:js:fix": "eslint --fix ./src/**/*.js",
         "lint:css": "stylelint ./src/**/*.css",
         "lint": "npm run lint:ts && npm run lint:css && lint . --ext .ts",
-        "prepare": "husky install"       
+        "prepare": "husky install"
     },
     "author": "",
     "license": "ISC",
     "dependencies": {
         "-": "^0.0.1",
-        "@typescript-eslint/eslint-plugin": "^6.7.5",
-        "@typescript-eslint/parser": "^6.7.5",
         "cross-env": "^7.0.3",
         "eslint-plugin-react": "^7.33.2",
         "http-server": "^14.1.1",
@@ -27,6 +25,8 @@
     },
     "devDependencies": {
         "@types/lodash": "^4.14.199",
+        "@typescript-eslint/eslint-plugin": "^6.7.5",
+        "@typescript-eslint/parser": "^6.7.5",
         "axios": "^1.5.0",
         "copy-webpack-plugin": "^11.0.0",
         "css-loader": "^6.8.1",

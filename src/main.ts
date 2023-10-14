@@ -8,12 +8,12 @@ import {
 import '../src/style.css'
 const countGameElement = document.querySelector('.app-game') as HTMLElement
 // const blockCards = document.querySelector('.app-cards')
-const countBtnElement = document.querySelector('.appGame') as HTMLElement
+// const countBtnElement = document.querySelector('.appGame') as HTMLElement
 
 export let newGame = ''
 
 export const renderComplexity = () => {
-    let complexityHTML = ` <div class="count-body">
+    const complexityHTML = ` <div class="count-body">
     <div class="count" id="count">
    
     <header class="count-text">
@@ -37,9 +37,11 @@ export const renderComplexity = () => {
     
     </div>`
 
-    countGameElement.innerHTML = complexityHTML 
+    countGameElement.innerHTML = complexityHTML
 
-    const complexityElements = document.getElementsByName('radios') as NodeListOf<HTMLInputElement> 
+    const complexityElements = document.getElementsByName(
+        'radios',
+    ) as NodeListOf<HTMLInputElement>
     const startButton = document.querySelector('.count-button') as HTMLElement
     startButton.addEventListener('click', () => {
         for (const complexityElement of complexityElements) {
@@ -59,7 +61,9 @@ renderComplexity()
 
 function getHeadenCard() {
     const allCards = document.querySelectorAll('.cards')
-    const shirtCadrs = document.querySelectorAll('.shirt-cards') as NodeListOf<Element>
+    const shirtCadrs = document.querySelectorAll(
+        '.shirt-cards',
+    ) as NodeListOf<Element>
 
     for (const allCard of allCards) {
         allCard.classList.add('new-cards')
@@ -78,7 +82,7 @@ function clickCards() {
 
     for (const gameClickCard of gameClickCards) {
         gameClickCard.addEventListener('click', () => {
-            let cardsChildren = gameClickCard.children
+            const cardsChildren = gameClickCard.children
             cardsChildren[0].classList.remove('new-cards')
             cardsChildren[1].classList.add('new-cards')
 
