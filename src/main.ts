@@ -74,7 +74,7 @@ function clickCards() {
     const gameClickCards = document.querySelectorAll('.cards-box')
     let countClick = 0
     let card1: string
-    let card2
+    let card2: string
 
     for (const gameClickCard of gameClickCards) {
         gameClickCard.addEventListener('click', () => {
