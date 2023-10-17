@@ -4,6 +4,7 @@ import {
     gameCardsLost,
     renderLevelGame,
     counterWath,
+    newCards,
 } from './renderGame'
 import '../src/style.css'
 const countGameElement = document.querySelector('.app-game') as HTMLElement
@@ -79,7 +80,7 @@ function clickCards() {
     let countClick = 0
     let card1: string
     let card2: string
-
+    let counterCards: number = 0
     for (const gameClickCard of gameClickCards) {
         gameClickCard.addEventListener('click', () => {
             const cardsChildren = gameClickCard.children
@@ -96,10 +97,13 @@ function clickCards() {
                 console.log(card2)
 
                 if (card1 === card2) {
-                    setTimeout(() => {
-                        clearInterval(counterWath)
-                        gameCardsWin()
-                    }, 1000)
+                    counterCards++
+                    if (counterCards === newCards.length / 2) {
+                        setTimeout(() => {
+                            clearInterval(counterWath)
+                            gameCardsWin()
+                        }, 1000)
+                    }
                 } else {
                     setTimeout(() => {
                         clearInterval(counterWath)
